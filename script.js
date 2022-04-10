@@ -3,8 +3,21 @@
 let player = 1;
 const gridArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let boardFullCheck = false;
+let checkWin = false;
 
-boardFullCheck = gridArray.every((e) => e !== 0);
+// check if board is full on each click and if there is a winner
+document.addEventListener("click", function () {
+  boardFullCheck = gridArray.every((e) => e !== 0);
+  if (
+    //top row all the same value
+    gridArray[0] !== 0 &&
+    gridArray[0] === gridArray[1] &&
+    gridArray[1] === gridArray[2]
+  ) {
+    console.log("We have a winner!");
+  }
+  console.log(boardFullCheck);
+});
 
 //Listen for click and place X or O in box-x-1
 document.querySelector(".box-x-1").addEventListener("click", function () {
