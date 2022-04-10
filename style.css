@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.game-board {
+  display: grid;
+  glyph-orientation-horizontal: 0deg;
+  glyph-orientation-vertical: 0deg;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 300px 300px 300px;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: 20px;
+  font-size: 200px;
+}
+
+.box-x-1 {
+  border: 1px solid;
+}
+
+.box-x-2 {
+  border: 1px solid;
+}
+
+.box-x-3 {
+  border: 1px solid;
+}
+
+.box-y-1 {
+  border: 1px solid;
+}
+
+.box-y-2 {
+  border: 1px solid;
+}
+
+.box-y-3 {
+  border: 1px solid;
+}
+
+.box-z-1 {
+  border: 1px solid;
+}
+
+.box-z-2 {
+  border: 1px solid;
+}
+
+.box-z-3 {
+  border: 1px solid;
+}
