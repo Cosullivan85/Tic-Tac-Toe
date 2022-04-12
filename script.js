@@ -1,6 +1,6 @@
 "use strict";
 
-let player = 1;
+let player = 2;
 const gridArray = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 let boardFullCheck = false;
 let checkWin = false;
@@ -14,7 +14,60 @@ document.addEventListener("click", function () {
     gridArray[0] === gridArray[1] &&
     gridArray[1] === gridArray[2]
   ) {
-    console.log("We have a winner!");
+    console.log(`Player ${player} is the winner!`);
+  } else if (
+    //middle row all the same value
+    gridArray[3] !== 0 &&
+    gridArray[3] === gridArray[4] &&
+    gridArray[4] === gridArray[5]
+  ) {
+    console.log(`Player ${player} is the winner!`);
+  } else if (
+    //bottom row all the same value
+    gridArray[6] !== 0 &&
+    gridArray[6] === gridArray[7] &&
+    gridArray[7] === gridArray[8]
+  ) {
+    console.log(`Player ${player} is the winner!`);
+  } else if (
+    //left column all the same value
+    gridArray[0] !== 0 &&
+    gridArray[0] === gridArray[3] &&
+    gridArray[3] === gridArray[6]
+  ) {
+    console.log(`Player ${player} is the winner!`);
+    console.log(boardFullCheck);
+  } else if (
+    //middle column all the same value
+    gridArray[1] !== 0 &&
+    gridArray[1] === gridArray[4] &&
+    gridArray[4] === gridArray[7]
+  ) {
+    console.log(`Player ${player} is the winner!`);
+    console.log(boardFullCheck);
+  } else if (
+    //right column all the same value
+    gridArray[2] !== 0 &&
+    gridArray[2] === gridArray[5] &&
+    gridArray[5] === gridArray[8]
+  ) {
+    console.log(`Player ${player} is the winner!`);
+    console.log(boardFullCheck);
+  } else if (
+    //left diagonal all the same value
+    gridArray[0] !== 0 &&
+    gridArray[0] === gridArray[4] &&
+    gridArray[4] === gridArray[8]
+  ) {
+    console.log(`Player ${player} is the winner!`);
+    console.log(boardFullCheck);
+  } else if (
+    //right diagonal all the same value
+    gridArray[2] !== 0 &&
+    gridArray[2] === gridArray[4] &&
+    gridArray[4] === gridArray[6]
+  ) {
+    console.log(`Player ${player} is the winner!`);
   }
   console.log(boardFullCheck);
 });
